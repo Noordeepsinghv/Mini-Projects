@@ -1,0 +1,64 @@
+body {
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+h1 {
+    color: #333;
+    font-family:'Segoe UI';
+    font-size: 42px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: solid;
+    border-color: #007BFF;
+    border-width: 2px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+button:hover {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border-style: solid;
+    border-color: #007BFF;
+    border-width: 2px;
+    border-radius: 20px;
+    mask-border-outset: 100px;
+    transform-origin: 0.3s ease;
+    box-shadow: rgb(0, 110, 255) 0px 0px 10px;
+}
+button:active {
+    background-color: #007BFF;
+    box-shadow: rgb(0, 110, 255) 0px 0px 10px;
+    transform: scale(0.95);
+}
+div#signature {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+    position: fixed;
+    bottom: 2px;
+    right: 16px;
+}
+div#displayText {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    font-size: 75px;
+    position: fixed;
+    top: 250px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    text-transform:uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
