@@ -16,82 +16,79 @@ h1 {
 .maindiv {
     background-color: white;
     color: black;
-    width: 350px;
+    width: 90%;
+    max-width: 400px;
+    height: 60vh;
+    max-height: 385.188px;
     padding: 20px;
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
 }
 .inputdiv {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
     background-color:rgb(255, 188, 107);
+    width: 85%;
+    max-width: 340px;
     padding: 10px;
-    margin: 5px auto;
-    width: 300px;
-    text-align: left;
+    margin-bottom: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: inline-block;
 }
 .outputdiv {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    margin: 5px auto;
     background-color: rgb(142, 255, 108);
+    width: 85%;
     padding: 10px;
+    margin-top: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
-    display: inline-block;
+    max-width: 340px;
 }
-span#input {
+/* span#input {
     font-family: verdana;
     color: black;
     font-size: 18px;
-    float: left;
-    display: flex;
-    margin: 5px;
-}
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 10px;
+} */
 input#rateValue {
+    background-color: rgb(255, 188, 107);
     font-family: verdana;
+    font-size: auto;
     width: 38px;
     padding: 2px;
-    background-color: rgb(255, 188, 107);
     border: none;
     color: black;
-    font-size: 14px auto;
-    float: left;
-    margin-top: 7px;
     text-align-last: right;
 }
 span#percentage {
     font-family: verdana;
     color: black;
     font-size: 12px;
-    float: left;
-    margin-top: 10px;
+}
+input[type="number"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 50%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input[type="range"] {
+    width: 50%;
+    cursor: pointer;
 }
 span#outputLable {
     font-family: verdana;
     color: black;
-    font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    padding: 2px;
-    background-color: white;
-}
-span#output {
-    font-family: verdana;
-    font-weight: bold;
-    color: black;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: center;
     text-transform: uppercase;
 }
 span#result {
@@ -101,33 +98,12 @@ span#result {
     display: block;
     margin-top: 10px;
 }
-input[type="number"] {
-    width: 50%;
-    float: right;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-input[type="range"] {
-    width: 50%;
-    float: right;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    cursor: pointer;
-}
-#all_years {
-    width: 50%;
-    float: center;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+span#output {
+    font-family: verdana;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 button {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
