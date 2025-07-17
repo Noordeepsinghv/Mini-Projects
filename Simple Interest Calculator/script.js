@@ -21,7 +21,7 @@ function compute() {
 }
 function updateRate() {
     var rateValue = document.getElementById("rate").value;
-    document.getElementById("rateValue").value = rateValue;
+    document.getElementById("rateValue").value = rateValue + "%";
 }
 function updateRateValue() {
     var rate = document.getElementById("rateValue").value;
