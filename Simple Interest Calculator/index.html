@@ -16,12 +16,12 @@
                 <span id="input">Amount: </span>
                 <input type="number" id="principal"> <br />
             </div>
-            <div>
+            <div id="rateDiv">
                 <span id="input">Rate: </span>
+                <input id="rateValue" min="1" max="20" value="10.25" onchange="updateRateValue()"> <span 
+                    id="percentage">%</span>
                 <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25" onmousemove="updateRate()"
-                    onchange="updateRate()">
-                <input id="rateValue" min="1" max="20" value="10.25" onchange="updateRateValue()"> <span
-                    id="percentage">%</span><br>
+                    onchange="updateRate()"><br>
             </div>
             <div id="timeDiv">
                 <span id="input">Time:</span>
