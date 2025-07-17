@@ -17,8 +17,8 @@ h1 {
 .maindiv {
     background-color: white;
     color: black;
-    width: 60%;
-    max-width: 320px;
+    width: 80%;
+    max-width: 400px;
     padding: 10px;
     padding-bottom: 5px;
     border-radius: 25px;
@@ -33,7 +33,7 @@ h1 {
 .maindiv:hover, .maindiv:focus-within {
     background-color: white;
     color: black;
-    width: 60%;
+    width: 80%;
     padding: 10px;
     padding-bottom: 5px;
     border-radius: 25px;
@@ -68,14 +68,14 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-/* div#principalDiv, div#rateDiv, div#timeDiv {
-    margin: 5px;
-} */
+div#principalDiv, div#rateDiv, div#timeDiv {
+    margin: 2px;
+}
 span#input {
     float: left;
     font-family: verdana;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 5px;
     margin-left: 10px;
