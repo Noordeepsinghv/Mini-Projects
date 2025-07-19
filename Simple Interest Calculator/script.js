@@ -27,3 +27,35 @@ function updateRateValue() {
     var rate = document.getElementById("rateValue").value;
     document.getElementById("rate").value = rate;
 }
+
+const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function handleThemeChange(queary) {
+  if (queary.matches) {
+    document.body.classList.add('dark-mode');
+    document.getElementById("DayNightIcon").src = "solid-white-moon-symbol.png";
+  } else {
+    document.body.classList.remove('dark-mode');
+    document.getElementById("DayNightIcon").src = "solid-black-sun-symbol.png";
+  }
+}
+
+// Initial check
+handleThemeChange(darkModeQuery);
+
+// Listen for changes
+darkModeQuery.addEventListener('change', handleThemeChange);
+
+
+function toggleDayNight() {
+    const body = document.body;
+    const icon = document.getElementById("DayNightIcon");
+    
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        icon.src = "solid-black-sun-symbol.png"; // Day icon
+    } else {
+        body.classList.add('dark-mode');
+        icon.src = "solid-white-moon-symbol.png"; // Night icon
+    }
+}

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana;
     background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
@@ -7,20 +7,26 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
-    color:grey;
-    font-family: verdana;
-    font-size: clamp(1vw, 1.52em, 2rem);
+    color: grey;
+    font-size: clamp(0.5vw, 1.52em, 2rem);
     margin-top: 5px;
+    transition: color 0.4s ease;
 }
+
 .maindiv {
     background-color: white;
     color: black;
     width: 80%;
     max-width: 400px;
-    padding: 10px;
-    padding-bottom: 5px;
+    padding: 10px 10px 5px;
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -28,60 +34,52 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: box-shadow 0.2s ease;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.2s ease;
 }
-.maindiv:hover, .maindiv:focus-within {
-    background-color: white;
-    color: black;
-    width: 80%;
-    padding: 10px;
-    padding-bottom: 5px;
-    border-radius: 25px;
-    text-align: center;
+
+.maindiv:hover,
+.maindiv:focus-within {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: box-shadow 0.2s ease;
 }
+
 .inputdiv {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:rgb(255, 188, 107);
+    background-color: rgb(255, 188, 107);
     width: 85%;
-    max-width: 340px;
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
+
 .outputdiv {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(142, 255, 108);
     width: 85%;
-    max-width: 340px;
     padding: 10px;
     margin-top: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
-div#principalDiv, div#rateDiv, div#timeDiv {
+
+div#principalDiv,
+div#rateDiv,
+div#timeDiv {
     margin: 2px;
 }
+
 span#input {
     float: left;
-    font-family: verdana;
     color: black;
     font-size: 16px;
     text-transform: uppercase;
     padding: 5px;
-    margin-left: 10px;
+    transition: color 0.4s ease;
 }
+
 input#rateValue {
-    font-family: verdana;
     width: 16%;
     float: right;
     text-align: center;
@@ -90,8 +88,8 @@ input#rateValue {
     border: 1px solid #ccc;
     margin-right: 10px;
 }
+
 input[type="number"] {
-    font-family: verdana;
     width: 50%;
     float: right;
     padding: 5px;
@@ -99,36 +97,44 @@ input[type="number"] {
     border: 1px solid #ccc;
     margin-right: 10px;
 }
+
 input[type="range"] {
     width: 30%;
     float: right;
     cursor: pointer;
     padding: 5px;
 }
+
 span#outputLable {
-    font-family: verdana;
     color: black;
     font-size: 16px;
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    border: 1px dashed black;
+    padding: 2px;
+    border-radius: 5px;
+    transition: color 0.4s ease, border-color 0.4s ease;
 }
+
 span#result {
-    font-family: verdana;
     font-size: 18px;
     color: black;
     display: block;
     margin-top: 10px;
+    transition: color 0.4s ease;
 }
+
 span#output {
-    font-family: verdana;
     font-weight: bold;
     color: black;
     font-size: 18px;
     text-transform: uppercase;
+    transition: color 0.4s ease;
 }
-button {
-    font-family: Verdana;
-    background-color:gray;
+
+#compute {
+    background-color: gray;
     color: white;
     padding: 5px;
     margin-top: 20px;
@@ -136,32 +142,54 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    transition: box-shadow 0.2s ease;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
-button:hover {
-    font-family: Verdana;
-    background-color: grey;
-    color: white;
-    padding: 5px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
+
+#compute:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    font-size: 18px;
-    transition: box-shadow 0.2s ease;
 }
-button:active {
-    font-family: Verdana;
+
+#compute:active {
     background-color: rgb(80, 80, 80);
-    color: white;
-    padding: 5px;
-    margin-top: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: all 0.1s ease;
+    transition: background-color 0.1s ease;
 }
+
+#DayNightSwitch {
+    position: fixed;
+    top: 16px;
+    right: 32px;
+    background: linear-gradient(to top, yellow, orange);
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition:  0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+#DayNightSwitch:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#DayNightIcon {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    transition: transform 0.2s ease;
+}
+
+#DayNightSwitch:hover #DayNightIcon {
+    width: 100%;
+    transform: rotate(30deg);
+    transition: transform 0.5s ease;
+}
+
+#DayNightSwitch:active #DayNightIcon {
+    transform: rotate(90deg);
+    transition: transform 0.1s ease;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -170,8 +198,91 @@ footer {
     text-align: center;
     font-size: 12px;
     color: grey;
-    font-family: verdana;
-    background-color: rgb(38, 38, 38);
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(255, 255, 255);
     padding: 5px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ===================== Dark Mode Styles ===================== */
+body.dark-mode {
+    background: rgb(0, 0, 0);
+}
+
+body.dark-mode .maindiv {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .maindiv:hover,
+body.dark-mode .maindiv:focus-within {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode h1 {
+    color: lightgrey;
+}
+
+body.dark-mode .inputdiv {
+    background-color: rgb(205, 138, 57);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .outputdiv {
+    background-color: rgb(57, 205, 138);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode span#input,
+body.dark-mode span#result,
+body.dark-mode span#output {
+    color: white;
+}
+
+body.dark-mode span#outputLable {
+    color: white;
+    border: 1px dashed white;
+}
+
+body.dark-mode #compute {
+    background-color: grey;
+    color: white;
+}
+
+body.dark-mode #compute:hover {
+    background-color: grey;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+body.dark-mode #compute:active {
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+
+body.dark-mode #DayNightSwitch {
+    background: linear-gradient(to top, #000428, #004e92);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode #DayNightSwitch:hover {
+    background: linear-gradient(to top, #000428, #004e92);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode #DayNightSwitch:active #DayNightIcon {
+    transform: rotate(90deg);
+    transition: transform 0.1s ease;
+}
+
+body.dark-mode footer {
+    background-color: rgb(30, 30, 30);
+    color: lightgrey;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
