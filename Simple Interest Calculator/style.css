@@ -9,6 +9,9 @@ body {
     margin: 0;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
+body.dark-mode {
+    background: rgb(0, 0, 0);
+}
 
 html {
     scroll-behavior: smooth;
@@ -19,6 +22,9 @@ h1 {
     font-size: clamp(0.5vw, 1.52em, 2rem);
     margin-top: 5px;
     transition: color 0.4s ease;
+}
+body.dark-mode h1 {
+    color: lightgrey;
 }
 
 .maindiv {
@@ -36,10 +42,21 @@ h1 {
     justify-content: center;
     transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.2s ease;
 }
+body.dark-mode .maindiv {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 
 .maindiv:hover,
 .maindiv:focus-within {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode .maindiv:hover,
+body.dark-mode .maindiv:focus-within {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .inputdiv {
@@ -53,6 +70,11 @@ h1 {
     flex-direction: column;
     transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
+body.dark-mode .inputdiv {
+    background-color: rgb(205, 138, 57);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
 
 .outputdiv {
     background-color: rgb(142, 255, 108);
@@ -62,6 +84,11 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+body.dark-mode .outputdiv {
+    background-color: rgb(57, 205, 138);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 div#principalDiv,
@@ -77,6 +104,9 @@ span#input {
     text-transform: uppercase;
     padding: 5px;
     transition: color 0.4s ease;
+}
+body.dark-mode span#input {
+    color: white;
 }
 
 input#rateValue {
@@ -116,6 +146,10 @@ span#outputLable {
     border-radius: 5px;
     transition: color 0.4s ease, border-color 0.4s ease;
 }
+body.dark-mode span#outputLable {
+    color: white;
+    border: 1px dashed white;
+}
 
 span#result {
     font-size: 18px;
@@ -124,6 +158,9 @@ span#result {
     margin-top: 10px;
     transition: color 0.4s ease;
 }
+body.dark-mode span#result {
+    color: white;
+}
 
 span#output {
     font-weight: bold;
@@ -131,6 +168,9 @@ span#output {
     font-size: 18px;
     text-transform: uppercase;
     transition: color 0.4s ease;
+}
+body.dark-mode span#output {
+    color: white;
 }
 
 #compute {
@@ -144,14 +184,27 @@ span#output {
     font-size: 18px;
     transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
+body.dark-mode #compute {
+    background-color: grey;
+    color: white;
+}
 
 #compute:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+body.dark-mode #compute:hover {
+    background-color: grey;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 #compute:active {
     background-color: rgb(80, 80, 80);
     transition: background-color 0.1s ease;
+}
+body.dark-mode #compute:active {
+    background-color: rgb(80, 80, 80);
+    color: white;
 }
 
 #DayNightSwitch {
@@ -167,25 +220,36 @@ span#output {
     height: 40px;
     transition:  0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
 }
+body.dark-mode #DayNightSwitch {
+    background: linear-gradient(to top, #000428, #004e92);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 
 #DayNightSwitch:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode #DayNightSwitch:hover {
+    background: linear-gradient(to top, #000428, #004e92);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 #DayNightIcon {
     display: block;
     margin: 0 auto;
-    width: 85%;
+    width: 100%;
     transition: transform 0.2s ease;
 }
 
 #DayNightSwitch:hover #DayNightIcon {
-    width: 100%;
     transform: rotate(30deg);
-    transition: transform 0.5s ease;
+    transition: transform 0.2s ease;
 }
 
 #DayNightSwitch:active #DayNightIcon {
+    transform: rotate(90deg);
+    transition: transform 0.1s ease;
+}
+body.dark-mode #DayNightSwitch:active #DayNightIcon {
     transform: rotate(90deg);
     transition: transform 0.1s ease;
 }
@@ -204,83 +268,6 @@ footer {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
-
-/* ===================== Dark Mode Styles ===================== */
-body.dark-mode {
-    background: rgb(0, 0, 0);
-}
-
-body.dark-mode .maindiv {
-    background-color: rgb(30, 30, 30);
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-body.dark-mode .maindiv:hover,
-body.dark-mode .maindiv:focus-within {
-    background-color: rgb(30, 30, 30);
-    color: white;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-body.dark-mode h1 {
-    color: lightgrey;
-}
-
-body.dark-mode .inputdiv {
-    background-color: rgb(205, 138, 57);
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-body.dark-mode .outputdiv {
-    background-color: rgb(57, 205, 138);
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-body.dark-mode span#input,
-body.dark-mode span#result,
-body.dark-mode span#output {
-    color: white;
-}
-
-body.dark-mode span#outputLable {
-    color: white;
-    border: 1px dashed white;
-}
-
-body.dark-mode #compute {
-    background-color: grey;
-    color: white;
-}
-
-body.dark-mode #compute:hover {
-    background-color: grey;
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-}
-
-body.dark-mode #compute:active {
-    background-color: rgb(80, 80, 80);
-    color: white;
-}
-
-body.dark-mode #DayNightSwitch {
-    background: linear-gradient(to top, #000428, #004e92);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-body.dark-mode #DayNightSwitch:hover {
-    background: linear-gradient(to top, #000428, #004e92);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
-body.dark-mode #DayNightSwitch:active #DayNightIcon {
-    transform: rotate(90deg);
-    transition: transform 0.1s ease;
-}
-
 body.dark-mode footer {
     background-color: rgb(30, 30, 30);
     color: lightgrey;

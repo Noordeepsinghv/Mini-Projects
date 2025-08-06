@@ -59,3 +59,4 @@ function toggleDayNight() {
         icon.src = "solid-white-moon-symbol.png"; // Night icon
     }
 }
+
