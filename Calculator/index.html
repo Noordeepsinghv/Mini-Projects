@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
-
 <body>
-    <div id="frame">
-        <div id="screen">
+    <header>
+        <h2 id="calculator">Calculator</h2>
+        <button id="darkMode">Dark Mode</button>
+    </header>
 
+    <div id="mainFrame">
+        <div id="display">
+            <span>0</span>
         </div>
-        <div id="keypad">
-            <button id="allClear">AC</button>
-            <button id="brackets">()</button>
-            <button id="percent">%</button>
-            <button id="divide">/</button>
+        <div id="keyArea">
+            <button id="allClear" class="firstRow">AC</button>
+            <button id="brackets" class="firstRow">()</button>
+            <button id="percentage" class="firstRow">%</button>
+            <button id="divide" class="firstRow">/</button>
             <br>
             <button id="seven">7</button>
             <button id="eight">8</button>
             <button id="nine">9</button>
             <button id="multiply">*</button>
             <br>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="minus">-</button>
+            <br>
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="plus">+</button>
+            <br>
+            <button id="zero">0</button>
+            <button id="dot">.</button>
+            <button id="clear"><</button>
+            <button id="equalTo">=</button>
+            <br>
         </div>
     </div>
 </body>
-
 </html>
