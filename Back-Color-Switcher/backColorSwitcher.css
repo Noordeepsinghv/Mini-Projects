@@ -48,10 +48,9 @@ div#signature {
 }
 div#displayText {
     margin-top: 20px;
-    font-size: 20px;
     color: #333;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 70vw;
     position: absolute;
     top: 250px;
     text-align: center;
