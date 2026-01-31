@@ -10,18 +10,18 @@
     <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
         <div class="inputdiv">
-            <div id="principalDiv">
-                <span id="input">Amount:</span>
-                <input type="number" id="principal"> <br />
+            <div id="principleDiv" class="inputContainer">
+                <!-- <label for="principle" id="principle">principle</label> -->
+                <input type="number" id="principle" class="input" title="principle" placeholder="Principle" onchange="squeezeInput()">
             </div>
-            <div id="rateDiv">
-                <span id="input">Rate:</span>
-                <input id="rateValue" min="1" max="20" value="" onchange="updateRateValue()">
-                <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()"><br>
+            <div id="rateDiv" class="inputContainer">
+                <!-- <label for="rateValue" id="rateValue">Rate</label> -->
+                <input id="rateValue" class="input" min="1" max="20" value="" placeholder="Rate" onchange="updateRateValue(), updateRate()">
+                <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()">
             </div>
-            <div id="timeDiv">
-                <span id="input">Time:</span>
-                <input type="number" id="years" list="all_years"><br />
+            <div id="timeDiv" class="inputContainer">
+                <!-- <label for="years" id="years">Time</label> -->
+                <input type="number" class="input" id="years" list="all_years" placeholder="Time">
                 <datalist id="all_years">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -37,10 +37,9 @@
             </div>
         </div>
         <div class="outputdiv">
-            <span id="outputLable">Output</span>
-            <span id="result"></span><br>
+            <button id="outputLable" onclick="compute()" >Output</button>
+            <span id="result">Press output to get results</span><br>
         </div>
-        <button id="compute" onclick="compute()">Compute Interest</button><br>
     </div>
     <div>
         <button id="DayNightSwitch" onclick="toggleDayNight()">
