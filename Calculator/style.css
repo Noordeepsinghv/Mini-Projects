@@ -3,48 +3,88 @@ html {
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-header{
-
-}
-
-h2#calculator {
-
-}
-
-button#darkMode {
-
+h1#calculator {
+    color: black;
 }
 
 div#mainFrame {
-    display: flex;
-    justify-self: center;
     background-color: lightblue;
-    width: 40vw;
+    width: 30vw;
     height: 60vh;
-    min-width: 40vw;
+    min-width: 250px;
+    max-width: 40vw;
+    min-height: 320px;
+    max-height: 340px;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 2px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-/* div#display {
-    background-color: aliceblue;
-    height: 10vh;
-    width: 30vw;
-    display: block;
-    justify-self: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border-width: 1px;
-    font-size: 2rem;
-    direction: rtl;
-} */
+div.buttonRows{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-/* div#keyArea {
-    display: block;
-} */
+div.buttonRows button{
+    width: 6.75vw;
+    height: 8vh;
+    margin: 2px;
+    min-width: 55px;
+    min-height: 40px;
+    max-height: 45px;
+    font-size: 1.5em;
+    border: 1px solid grey;
+    border-radius: 25px;
+    background-color: azure;
+    transition: all 0.05s ease-out;
+}
+
+div.buttonRows button:active{
+    border-radius: 15px;
+    transition: all 0.05s ease-out;
+    background-color:rgb(223, 225, 225);
+}
+div.buttonRows button.pressed{
+    border-radius: 15px;
+    transition: all 0.05s ease-out;
+    background-color:rgb(223, 225, 225);
+}
+
+div#display input{
+    background-color: white;
+    margin-top: 10px;
+    padding: 2px;
+    width: 90%;
+    height: 80%;
+    font-size: 3em;
+    text-align: right;
+    text-align-last: right;
+    border: 1px solid grey;
+    border-radius: 10px;
+    scroll-behavior: smooth;
+}
+
+footer div{
+    background-color: darkgrey;
+    position: absolute;
+    display: inline-block;
+    bottom: 0%;
+    right: 0%;
+    padding: 5px;
+    border-radius: 10px 0px 0px 0px;
+    font-size: 0.65em;
+}

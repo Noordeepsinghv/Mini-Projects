@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/374211dff5.js" crossorigin="anonymous"></script>
     <title>Calculator</title>
 </head>
 <body>
-    <header>
-        <h2 id="calculator">Calculator</h2>
-        <button id="darkMode">Dark Mode</button>
-    </header>
-
+    <h1 id="calculator">Simple Calculator</h1>
     <div id="mainFrame">
         <div id="display">
-            <span>0</span>
+            <input type="text" placeholder="0" value="" inputmode="decimal" autocomplete="off" onfocus>
         </div>
         <div id="keyArea">
-            <button id="allClear" class="firstRow">AC</button>
-            <button id="brackets" class="firstRow">()</button>
-            <button id="percentage" class="firstRow">%</button>
-            <button id="divide" class="firstRow">/</button>
-            <br>
-            <button id="seven">7</button>
-            <button id="eight">8</button>
-            <button id="nine">9</button>
-            <button id="multiply">*</button>
-            <br>
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="six">6</button>
-            <button id="minus">-</button>
-            <br>
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
-            <button id="plus">+</button>
-            <br>
-            <button id="zero">0</button>
-            <button id="dot">.</button>
-            <button id="clear"><</button>
-            <button id="equalTo">=</button>
-            <br>
+            <div class="buttonRows">
+                <button id="allClear" class="calc-btn" data-key="AC">AC</button>
+                <button id="brackets" class="calc-btn" data-key="()">( )</button>
+                <button id="percentage" class="calc-btn" data-key="%">%</button>
+                <button id="divide" class="calc-btn" data-key="/">/</button>
+            </div>
+            <div class="buttonRows">
+                <button id="seven" class="calc-btn" data-key="7">7</button>
+                <button id="eight" class="calc-btn" data-key="8">8</button>
+                <button id="nine" class="calc-btn" data-key="9">9</button>
+                <button id="multiply" class="calc-btn" data-key="*">*</button>
+            </div>
+            <div class="buttonRows">
+                <button id="four" class="calc-btn" data-key="4">4</button>
+                <button id="five" class="calc-btn" data-key="5">5</button>
+                <button id="six" class="calc-btn" data-key="6">6</button>
+                <button id="minus" class="calc-btn" data-key="-">-</button>
+            </div>
+            <div class="buttonRows">
+                <button id="one" class="calc-btn" data-key="1">1</button>
+                <button id="two" class="calc-btn" data-key="2">2</button>
+                <button id="three" class="calc-btn" data-key="3">3</button>
+                <button id="plus" class="calc-btn" data-key="+">+</button>
+            </div>
+            <div class="buttonRows">
+                <button id="zero" class="calc-btn" data-key="0">0</button>
+                <button id="dot" class="calc-btn" data-key=".">.</button>
+                <button id="clear"class="calc-btn" data-key="C">
+                    <i class="fa-solid fa-delete-left fa-sm"></i>
+                </button>
+                <button id="equalTo" class="calc-btn" data-key="=">=</button>
+            </div>
         </div>
     </div>
+    <footer>
+        <div>
+            Made with Love
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            by Noor
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
