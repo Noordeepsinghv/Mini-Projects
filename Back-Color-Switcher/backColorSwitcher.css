@@ -50,7 +50,7 @@ div#displayText {
     margin-top: 20px;
     color: #333;
     font-weight: bold;
-    font-size: 7rem;
+    font-size: 0.75vw;
     position: absolute;
     top: 250px;
     text-align: center;
